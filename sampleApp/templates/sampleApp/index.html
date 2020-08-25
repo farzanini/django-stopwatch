@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farbeh SideBar V2.1.1</title>
+    <!--IMPORT BOOTSTRAP HERE-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-------------------------->
+    <!--IMPORT ICONS HERE-->
+    {% load static %}
+    <link
+      href="{% static 'sampleApp/open-iconic-master/font/css/open-iconic-bootstrap.css' %}"
+      rel="stylesheet"
+    />
+    <!-------------------------->
+    <!--IMPORT FONTS HERE-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-------------------------->
+    <!--IMPORT CSS FILE AND VUE FILE HERE-->
+    <link rel="stylesheet" href="{% static 'sampleApp/style.css' %}" />
+    <script src="{% static 'sampleApp/vue.js' %}"></script>
+    <!-------------------------->
+  </head>
+  <body>
+    <!--  SIDE BAR HERE  -->
+    <div class="vertical-nav nav-background" id="sidebar">
+      <!--SIDE BAR HEAD HERE-->
+      <div class="py-4 px-3 mb-4">
+        <div class="media d-flex align-items-center">
+          <!-- LOGO HERE -->
+          <img />
+          <!------------------->
+          <!--WEB APP NAME HERE-->
+          <div class="media-body">
+            <h4 class="m-0 text-center logoText nav-background expanded">
+              Farbeh
+            </h4>
+            <h4 class="m-1 logoText nav-background expanded2 py-0">
+              Fb
+            </h4>
+          </div>
+          <!------------------->
+        </div>
+      </div>
+      <!-------END OF SIDE BAR HEAD-------->
+
+      <!------------SIDE BAR ITEMS HERE--------------->
+      <ul class="nav">
+        <div id="items">
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+
+          <li
+            class="nav-item list-holder"
+            @click="isClicked = 1"
+            :class="{active: isClicked == 1}"
+          >
+            <a href="#" class="nav-link text-white">
+              <!-- icon is here-->
+              <span class="oi oi-home icon"></span>
+              <span class="items expanded">Home</span>
+            </a>
+          </li>
+
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+
+          <li
+            class="nav-item list-holder"
+            @click="isClicked = 2"
+            :class="{active: isClicked == 2}"
+          >
+            <a href="#" class="nav-link text-white">
+              <!-- icon is here -->
+              <span class="oi oi-clipboard icon"></span>
+              <span class="items expanded">Projects</span>
+            </a>
+          </li>
+
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <li
+            class="nav-item list-holder"
+            @click="isClicked = 3"
+            :class="{active: isClicked == 3}"
+          >
+            <a href="#" class="nav-link text-white">
+              <!-- icon is here-->
+              <span class="oi oi-tags icon"></span>
+              <span class="items expanded">Tags</span>
+            </a>
+          </li>
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <li
+            class="nav-item list-holder"
+            @click="isClicked = 4"
+            :class="{active: isClicked == 4}"
+          >
+            <a href="#" class="nav-link text-white">
+              <!-- icon is here-->
+              <span class="oi oi-task icon"></span>
+              <span class="items expanded">Tasks</span>
+            </a>
+          </li>
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+          <!--------------------------------------------------------->
+        </div>
+      </ul>
+    </div>
+    <!-- SIDE BAR ENDED -->
+
+    <!-- BOTTOM SECTION HERE  -->
+    <div class="bottom-section"></div>
+    <!-- BOTTOM SECTION ENDED -->
+
+    <!-- VUE SCRIPT HERE-->
+    <script>
+      new Vue({
+        el: "#items",
+        data: {
+          isClicked: 0,
+        },
+      });
+    </script>
+    <!--VUE SCRIPT ENDED-->
+  </body>
+</html>
