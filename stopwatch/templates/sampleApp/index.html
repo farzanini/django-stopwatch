@@ -1,0 +1,27 @@
+{%  extends "sampleApp/layout.html" %}
+
+{% block body %}
+    <form action="index.html" method="post">
+      <div class="startSection">
+        <span @click="start" class="startBtn" v-if="!isStart"></span>
+        <span @click="stop" class="stopBtn" v-else></span>
+      </div>
+      <div class="inputSection">
+        <input
+          type="text"
+          name="task_name"
+          v-if="!isStart"
+          class="userTaskInput"
+          v-on:input="inputTask"
+          v-on:keyup.enter="start"
+        />
+        <h1 class="userTaskShow" v-else> [[task]] </h1>
+      </div>
+    </form>
+      <!-- TIMER HERE -->
+      <div class="timerSection">
+        <h1 class="Timer" v-if="isStart">
+           [[show]]
+        </h1>
+      </div>
+{% endblock %}
